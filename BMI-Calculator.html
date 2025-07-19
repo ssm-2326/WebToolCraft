@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Calculate your Body Mass Index (BMI) easily using our BMI Calculator - Word Count Tools" />
+  <title>BMI Calculator - WebToolCraft</title>
+
+  <!-- Fonts and Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #e0ecff, #ffffff);
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #007BFF;
+      padding: 1rem 2rem;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header h1 a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ffd700;
+      border-bottom: 2px solid #ffd700;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .bmi-container {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .bmi-container h2 {
+      color: #007BFF;
+      margin-bottom: 1rem;
+    }
+
+    .bmi-container label {
+      display: block;
+      text-align: left;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    .bmi-container input {
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .bmi-container button {
+      margin-top: 1.5rem;
+      background: #007BFF;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+    }
+
+    .bmi-container button:hover {
+      background: #ffd700;
+      color: #000;
+    }
+
+    .bmi-result {
+      margin-top: 1.5rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #2b2d42;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><a href="https://www.wordcounttools.in">WebToolCraft</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tools.html" class="active">Tools</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="bmi-container animate__animated animate__fadeInUp animate__slow" data-aos="zoom-in">
+      <h2>Body Mass Index Calculator</h2>
+      <label for="height">Height (in cm):</label>
+      <input type="number" id="height" placeholder="e.g., 170">
+
+      <label for="weight">Weight (in kg):</label>
+      <input type="number" id="weight" placeholder="e.g., 65">
+
+      <button onclick="calculateBMI()">Calculate BMI</button>
+
+      <div class="bmi-result" id="result"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2025 <a href="https://www.wordcounttools.in/">WebToolCraft</a> | All rights reserved. ❤️
+    </p>
+    <div style="margin-top: 10px;">
+      <a href="https://www.instagram.com/ssm_2326" target="_blank" style="color: #fff; margin: 0 10px; font-size: 1.3rem;">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.threads.net/@ssm_2326" target="_blank" style="color: #fff; margin: 0 10px; font-size: 1.3rem;">
+        <i class="fa-brands fa-threads"></i>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100073714513688" target="_blank" style="color: #fff; margin: 0 10px; font-size: 1.3rem;">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function calculateBMI() {
+      const height = parseFloat(document.getElementById('height').value);
+      const weight = parseFloat(document.getElementById('weight').value);
+      const result = document.getElementById('result');
+
+      if (!height || !weight || height <= 0 || weight <= 0) {
+        result.textContent = 'कृपया सही Height और Weight दर्ज करें।';
+        return;
+      }
+
+      const bmi = (weight / ((height / 100) ** 2)).toFixed(2);
+      let category = '';
+
+      if (bmi < 18.5) {
+        category = 'Underweight';
+      } else if (bmi < 25) {
+        category = 'Normal weight';
+      } else if (bmi < 30) {
+        category = 'Overweight';
+      } else {
+        category = 'Obese';
+      }
+
+      result.textContent = `आपका BMI है ${bmi} (${category})`;
+    }
+  </script>
+</body>
+
+</html>

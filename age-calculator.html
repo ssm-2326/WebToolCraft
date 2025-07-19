@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Calculate your exact age from your date of birth using our online Age Calculator tool." />
+  <title>Age Calculator - WebToolCraft</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #e0ecff, #ffffff);
+      color: #222;
+    }
+
+    header {
+      background: #007BFF;
+      padding: 1rem 2rem;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    nav a[href="tools.html"] {
+      border-bottom: 2px solid #ffd700;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 5rem auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      color: #007BFF;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    input[type="date"] {
+      padding: 0.8rem;
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.7rem 2rem;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #ffd700;
+      color: #000;
+    }
+
+    .result {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+   footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><a href="https://www.wordcounttools.in">WebToolCraft</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tools.html" class="active">Tools</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container" data-aos="zoom-in">
+    <h2 class="animate__animated animate__fadeInDown">🔢 Age Calculator</h2>
+    <input type="date" id="dob">
+    <button onclick="calculateAge()">Calculate Age</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <footer style="background: #222; color: #ccc; text-align: center; padding: 1rem; margin-top: 15rem;">
+  <p style="margin: 0;">
+    &copy; 2025 
+    <a href="https://www.wordcounttools.in/" target="_self" style="color: #ffd700; text-decoration: none;">
+     WebToolCraft
+    </a> | All rights reserved. ❤️
+  </p>
+  <div style="margin-top: 10px;">
+    <a href="https://www.instagram.com/ssm_2326/profilecard/?igsh=MWVyMG1yZnNwOThmOQ==" target="_blank" style="color: #fff; margin: 0 10px; font-size: 1.3rem;">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.threads.net/@ssm_2326" target="_blank" style="color: #fff; margin: 0 10px; font-size: 1.3rem;">
+      <i class="fa-brands fa-threads"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=100073714513688" target="_blank" style="color: #fff; margin: 0 10px; font-size: 1.3rem;">
+      <i class="fab fa-facebook"></i>
+    </a>
+  </div>
+</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function calculateAge() {
+      const dob = new Date(document.getElementById('dob').value);
+      if (!dob.getTime()) {
+        document.getElementById('result').innerText = 'Please select a valid date.';
+        return;
+      }
+
+      const today = new Date();
+      let ageYears = today.getFullYear() - dob.getFullYear();
+      let ageMonths = today.getMonth() - dob.getMonth();
+      let ageDays = today.getDate() - dob.getDate();
+
+      if (ageDays < 0) {
+        ageMonths--;
+        ageDays += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+      }
+
+      if (ageMonths < 0) {
+        ageYears--;
+        ageMonths += 12;
+      }
+
+      document.getElementById('result').innerText =
+        `Your Age is ${ageYears} Years, ${ageMonths} Months, and ${ageDays} Days.`;
+    }
+  </script>
+</body>
+
+</html>
