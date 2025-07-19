@@ -7,12 +7,9 @@
   <meta name="description" content="Contact us at Word Counter Tool - Reach out with questions, feedback, or support needs.">
   <meta name="keywords" content="contact, support, word counter, feedback">
   <meta name="author" content="Sandeep Singh">
-
-  <meta name="keywords" content="Word Counter, Character Counter, Word Count Tool, Online Text Counter, SEO tools">
-  <meta name="author" content="Sandeep Singh">
   <meta name="google-adsense-account" content="ca-pub-6058277772245913">
 
-  <title>Word Counter - Online Tool</title>
+  <title>Contact - Word Counter Tool</title>
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WH77BWSD36"></script>
@@ -24,19 +21,10 @@
   </script>
 
   <!-- AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6058277772245913"
-    crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6058277772245913" crossorigin="anonymous"></script>
 
-  
-   <!-- Adsterra SocialBar -->
-<script type='text/javascript' src='//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js'></script>
-
-  <meta name="p:domain_verify" content="444c0b324aeba2f23e0142d2f6850756" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-   <!-- Pinterest Domain Verify (if using Pinterest marketing) -->
-  <meta name="p:domain_verify" content="444c0b324aeba2f23e0142d2f6850756" />
-  <title>Contact - Word Counter Tool</title>
+  <!-- Adsterra SocialBar -->
+  <script type='text/javascript' src='//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js'></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
@@ -48,9 +36,7 @@
       font-family: 'Poppins', sans-serif;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       background: linear-gradient(to right, #e0c3fc, #8ec5fc);
@@ -65,13 +51,9 @@
       padding: 20px;
       text-align: center;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      animation: fadeInDown 1s ease;
     }
 
-    header h1 {
-      font-size: 2.5rem;
-      color: #6a11cb;
-    }
+    header h1 { font-size: 2.5rem; color: #6a11cb; }
 
     nav {
       display: flex;
@@ -87,10 +69,7 @@
       transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: #6a11cb;
-    }
-
+    nav a:hover,
     nav a.active {
       color: #6a11cb;
       border-bottom: 2px solid #6a11cb;
@@ -102,7 +81,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      animation: fadeInUp 1s ease;
     }
 
     .contact-container {
@@ -111,7 +89,6 @@
       padding: 40px 30px;
       border-radius: 16px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      animation: zoomIn 0.8s ease;
     }
 
     .contact-container h2 {
@@ -148,11 +125,17 @@
       border: none;
       border-radius: 10px;
       cursor: pointer;
-      transition: background-color 0.3s;
     }
 
     button:hover {
       background-color: #5a0eb8;
+    }
+
+    .thank-you {
+      display: none;
+      margin-top: 20px;
+      color: green;
+      text-align: center;
     }
 
     footer {
@@ -162,39 +145,6 @@
       font-size: 0.9rem;
       color: #666;
       box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes zoomIn {
-      from {
-        transform: scale(0.95);
-        opacity: 0;
-      }
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
     }
   </style>
 </head>
@@ -206,18 +156,20 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="privacy.html">Privacy</a>
-     <a href="contact.html" target="_self">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
     <div class="contact-container">
       <h2>We're Here to Help</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Email Address" required />
-        <textarea rows="5" placeholder="Your Message"></textarea>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
         <button type="submit">Send Message</button>
+        <p class="thank-you" id="thankYouMessage">✅ Thank you! We have received your message.</p>
       </form>
     </div>
   </main>
@@ -226,10 +178,22 @@
     &copy; 2025 Word Counter Tool. All rights reserved.
   </footer>
 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const thankYouMessage = document.getElementById('thankYouMessage');
+      thankYouMessage.style.display = 'block';
+
+      this.reset();
+      setTimeout(() => {
+        thankYouMessage.style.display = 'none';
+      }, 5000);
+    });
+
     const currentPath = window.location.pathname.split("/").pop();
-    const navLinks = document.querySelectorAll("nav a");
-    navLinks.forEach(link => {
+    document.querySelectorAll("nav a").forEach(link => {
       if (link.getAttribute("href") === currentPath) {
         link.classList.add("active");
       }
