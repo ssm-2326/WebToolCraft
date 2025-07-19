@@ -4,12 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact us at Word Counter Tool - Reach out with questions, feedback, or support needs.">
-  <meta name="keywords" content="contact, support, word counter, feedback">
-  <meta name="author" content="Sandeep Singh">
-  <meta name="google-adsense-account" content="ca-pub-6058277772245913">
+  <meta name="description"
+    content="Contact us at Word Count Tools - Reach out with questions, suggestions, or feedback." />
+  <meta name="keywords" content="contact, webtoolcraft, tools support, sandeep singh, wordcounttools.in" />
+  <meta name="author" content="Sandeep Singh" />
+  <title>Contact -- WebToolCraft</title>
 
-  <title>Contact - Word Counter Tool</title>
+  <!-- Google Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WH77BWSD36"></script>
@@ -20,184 +25,209 @@
     gtag('config', 'G-WH77BWSD36');
   </script>
 
-  <!-- AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6058277772245913" crossorigin="anonymous"></script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6058277772245913"
+    crossorigin="anonymous"></script>
 
-  <!-- Adsterra SocialBar -->
-  <script type='text/javascript' src='//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js'></script>
+  <!-- Adsterra Script -->
+  <script type='text/javascript'
+    src='//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js'></script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
     }
 
-    html { scroll-behavior: smooth; }
-
     body {
-      background: linear-gradient(to right, #e0c3fc, #8ec5fc);
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #f2f8ff, #ffffff);
+      color: #222;
     }
 
     header {
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      background: #007BFF;
+      padding: 1rem 2rem;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
 
-    header h1 { font-size: 2.5rem; color: #6a11cb; }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 10px;
+    header h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
     }
 
     nav a {
+      margin: 0 12px;
+      color: #fff;
       text-decoration: none;
-      color: #333;
-      font-weight: 600;
-      transition: color 0.3s;
+      font-weight: 500;
+      padding-bottom: 4px;
+      position: relative;
+      transition: color 0.3s ease;
     }
 
-    nav a:hover,
-    nav a.active {
-      color: #6a11cb;
-      border-bottom: 2px solid #6a11cb;
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffd700;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after,
+    nav a[href="contact.html"]::after {
+      width: 100%;
     }
 
     main {
-      flex: 1;
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .contact-container {
       max-width: 900px;
-      background: #fff;
-      padding: 40px 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      margin: 3rem auto;
+      padding: 0 1rem;
     }
 
-    .contact-container h2 {
-      color: #6a11cb;
-      font-size: 2rem;
+    main h2 {
+      font-size: 2.5rem;
+      color: #007BFF;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+    .contact-form {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     }
 
-    input, textarea {
-      padding: 12px 15px;
-      font-size: 1rem;
-      border-radius: 10px;
-      border: 2px solid #ccc;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    .contact-form label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
     }
 
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: #6a11cb;
-    }
-
-    button {
-      background-color: #6a11cb;
-      color: white;
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
       padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 20px;
       font-size: 1rem;
+    }
+
+    .contact-form button {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 25px;
       border: none;
-      border-radius: 10px;
+      border-radius: 8px;
+      font-size: 1rem;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
 
-    button:hover {
-      background-color: #5a0eb8;
-    }
-
-    .thank-you {
-      display: none;
-      margin-top: 20px;
-      color: green;
-      text-align: center;
+    .contact-form button:hover {
+      background-color: #0056b3;
     }
 
     footer {
-      background: #fff;
-      padding: 15px;
+      background: #222;
+      color: #ccc;
       text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>✨ Word Counter Tool</h1>
+    <h1><a href="https://www.wordcounttools.in" style="color: #fff; text-decoration: none;">WebToolCraft</a></h1>
+
     <nav>
-      <a href="index.html">Home</a>
+      <a href="Home.html">Home</a>
+      <a href="tools.html">Tools</a>
       <a href="about.html">About</a>
-      <a href="privacy.html">Privacy</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <div class="contact-container">
-      <h2>We're Here to Help</h2>
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Email Address" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
-        <button type="submit">Send Message</button>
-        <p class="thank-you" id="thankYouMessage">✅ Thank you! We have received your message.</p>
-      </form>
-    </div>
+    <h2 class="animate__animated animate__fadeInDown">Contact Us</h2>
+
+    <form action="https://formsubmit.co/sandeepmaravi.915@gmail.com" method="POST"
+      class="contact-form animate__animated animate__fadeInUp" data-aos="zoom-in">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+      <input type="hidden" name="_next" value="https://www.wordcounttools.in/thankyou.html">
+
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
   </main>
 
-  <footer>
-    &copy; 2025 Word Counter Tool. All rights reserved.
+  <footer style="background: #222; color: #ccc; text-align: center; padding: 1rem; margin-top: 2rem;">
+    <p style="margin: 0;">
+      &copy; 2025
+      <a href="https://www.wordcounttools.in/" target="_self" style="color: #ffd700; text-decoration: none;">
+        WebToolCraft
+      </a> | All rights reserved. ❤️
+    </p>
+    <div style="margin-top: 10px;">
+      <a href="https://www.instagram.com/ssm_2326/profilecard/?igsh=MWVyMG1yZnNwOThmOQ==" target="_blank"
+        style="color: #fff; margin: 0 10px; font-size: 1.3rem;">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.threads.net/@ssm_2326" target="_blank"
+        style="color: #fff; margin: 0 10px; font-size: 1.3rem;">
+        <i class="fa-brands fa-threads"></i>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100073714513688" target="_blank"
+        style="color: #fff; margin: 0 10px; font-size: 1.3rem;">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
   </footer>
 
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- CDN Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const thankYouMessage = document.getElementById('thankYouMessage');
-      thankYouMessage.style.display = 'block';
-
-      this.reset();
-      setTimeout(() => {
-        thankYouMessage.style.display = 'none';
-      }, 5000);
-    });
-
-    const currentPath = window.location.pathname.split("/").pop();
-    document.querySelectorAll("nav a").forEach(link => {
-      if (link.getAttribute("href") === currentPath) {
-        link.classList.add("active");
-      }
-    });
+    AOS.init();
   </script>
 </body>
 
