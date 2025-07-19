@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ssm-2326.github.io/word-counter/index.html</loc>
-  </url>
-  <url>
-    <loc>https://ssm-2326.github.io/word-counter/about.html</loc>
-  </url>
-  <url>
-    <loc>https://ssm-2326.github.io/word-counter/contact.html</loc>
-  </url>
-  <url>
-    <loc>https://ssm-2326.github.io/word-counter/privacy.html</loc>
-  </url>
+  <url><loc>https://www.wordcounttools.in/</loc></url>
+  <url><loc>https://www.wordcounttools.in/tools.html</loc></url>
+  <url><loc>https://www.wordcounttools.in/about.html</loc></url>
+  <url><loc>https://www.wordcounttools.in/contact.html</loc></url>
+  <url><loc>https://www.wordcounttools.in/age-calculator.html</loc></url>
+  <url><loc>https://www.wordcounttools.in/BMI-Calculator.html</loc></url>
+  <url><loc>https://www.wordcounttools.in/Slug-generator.html</loc></url>
+  <url><loc>https://www.wordcounttools.in/Reading-time-estimator.html</loc></url>
+  <url><loc>https://www.wordcounttools.in/case-converter.html</loc></url>
+  <url><loc>https://www.wordcounttools.in/character-counter-nospace.html</loc></url>
+  <url><loc>https://www.wordcounttools.in/line-counter.html</loc></url>
+  <url><loc>https://www.wordcounttools.in/password-generator.html</loc></url>
+  <url><loc>https://www.wordcounttools.in/remove-spaces.html</loc></url>
+  <url><loc>https://www.wordcounttools.in/wordcounttools.html</loc></url>
 </urlset>
