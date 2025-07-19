@@ -4,29 +4,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Word Counter Tool - Count words and characters online. Fast and private.">
-  <meta name="keywords" content="word counter, character counter, online tool, text stats">
+  <meta name="description" content="Free online Word Counter tool. Instantly count words, characters, and more. Fast, private, and easy to use.">
+  <meta name="keywords" content="Word Counter, Character Counter, Word Count Tool, Online Text Counter, SEO tools">
   <meta name="author" content="Sandeep Singh">
   <meta name="google-adsense-account" content="ca-pub-6058277772245913">
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH77BWSD36"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-WH77BWSD36');
-</script>
+  <title>Word Counter - Online Tool</title>
 
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WH77BWSD36"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-WH77BWSD36');
+  </script>
+
+  <!-- AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6058277772245913"
-     crossorigin="anonymous"></script>
-  <script type='text/javascript' src='//pl27197988.profitableratecpm.com/16/cf/34/16cf346a2d5f6448f18e843139a5e311.js'></script>
+    crossorigin="anonymous"></script>
 
-  <meta name="p:domain_verify" content="444c0b324aeba2f23e0142d2f6850756"/>
+  
+   <!-- Adsterra SocialBar -->
+<script type='text/javascript' src='//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js'></script>
 
-
-  <title>Word Counter</title>
+  <meta name="p:domain_verify" content="444c0b324aeba2f23e0142d2f6850756" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -41,6 +45,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -67,16 +72,22 @@
       text-decoration: none;
       color: #333;
       font-weight: 600;
-      transition: color 0.3s;
+      transition: all 0.3s ease;
+      padding-bottom: 2px;
     }
 
     nav a:hover {
       color: #6a11cb;
     }
 
+    nav a.active {
+      color: #6a11cb;
+      border-bottom: 2px solid #6a11cb;
+    }
+
     main {
       flex: 1;
-      padding: 40px;
+      padding: 40px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -110,6 +121,30 @@
       text-align: center;
       font-size: 1.2rem;
       animation: zoomIn 0.5s ease;
+    }
+
+    .description-section {
+      margin-top: 80px;
+      background: #fff;
+      max-width: 900px;
+      padding: 40px 25px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1.2s ease;
+    }
+
+    .description-section h2 {
+      font-size: 2rem;
+      color: #6a11cb;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .description-section p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #444;
+      text-align: justify;
     }
 
     footer {
@@ -163,21 +198,46 @@
   <header>
     <h1>✨ Word Counter Tool</h1>
     <nav>
-      <a href="#">Home</a>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" id="homeLink">Home</a>
+      <a href="about.html" id="aboutLink">About</a>
+      <a href="privacy.html" id="privacyLink">Privacy</a>
+      <a href="contact.html" id="contactLink">Contact</a>
     </nav>
   </header>
+
   <main>
     <textarea id="textInput" placeholder="Type or paste your text here..."></textarea>
     <div class="results">
       Words: <span id="wordCount">0</span> | Characters: <span id="charCount">0</span>
     </div>
+
+    <!-- Scroll Description Section -->
+    <div class="description-section" id="tool-info">
+      <h2>What is a Word Counter Tool?</h2>
+      <p>
+        A Word Counter is an essential tool for writers, bloggers, students, and anyone who needs to count the number of words and characters in their content. Whether you're writing an essay, tweet, article, or code snippet, this tool instantly gives you accurate statistics. It supports counting <strong>words, characters, and spaces</strong> with real-time updates as you type.
+        <br><br>
+        It is 100% free, fast, and respects your privacy — no data is saved. Try now and improve your writing quality, meet character limits, and stay productive!
+      </p>
+    </div>
+
+     <main>
+    <div class="description-section">
+      <h2>How to Improve Your Writing with a Word Counter</h2>
+      <p>This is a placeholder blog post. You can add your content here by replacing this text with your article. The blog layout is designed for clarity, SEO, and reader engagement. Try writing about productivity tips, writing tools, content strategy, or anything your audience will love.</p>
+    </div>
+
+    <div class="description-section">
+      <h2>Top 5 Tools Every Blogger Should Use</h2>
+      <p>Word counters, grammar checkers, SEO analyzers — learn about essential tools that can make your blogging journey easier and more effective.</p>
+    </div>
   </main>
+  </main>
+
   <footer>
     &copy; 2025 Word Counter Tool. All rights reserved.
   </footer>
+
   <script>
     const textInput = document.getElementById('textInput');
     const wordCount = document.getElementById('wordCount');
@@ -188,11 +248,22 @@
       wordCount.textContent = text === '' ? 0 : text.split(/\s+/).length;
       charCount.textContent = text.length;
     });
+
+    const currentPage = window.location.pathname.split("/").pop();
+    const links = {
+      "index.html": "homeLink",
+      "about.html": "aboutLink",
+      "privacy.html": "privacyLink",
+      "contact.html": "contactLink"
+    };
+
+    if (links[currentPage]) {
+      document.getElementById(links[currentPage]).classList.add("active");
+    }
   </script>
 
   <!-- Adsterra SocialBar -->
-<script type='text/javascript' src='//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js'></script>
-
+  <script type='text/javascript' src='//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js'></script>
 </body>
 
 </html>
