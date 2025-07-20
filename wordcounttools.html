@@ -1,21 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title & Meta -->
+    <title>Word Counter Tool - WebToolCraft</title>
     <meta name="description"
-        content="Online Word & Character Counter - Count words, characters, sentences, paragraphs and reading time in real-time." />
-    <title>Word Counter Tool</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        crossorigin="anonymous" />
+        content="Use our free Word Counter Tool to count words, characters, and spaces instantly. Boost your writing with real-time stats." />
+    <meta name="keywords" content="word counter, character counter, online word count, WebToolCraft" />
+    <meta name="author" content="Sandeep Singh" />
+
+    <!-- Favicon (optional but good for branding) -->
+    <link rel="icon" href="../favicon.png" type="image/png" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WH77BWSD36"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-WH77BWSD36');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6058277772245913"
+        crossorigin="anonymous"></script>
+
+    <!-- Adsterra Ads -->
+    <script type="text/javascript"
+        src="//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js"></script>
+
     <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to right, #e0f7fa, #ffffff);
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #e0f7fa, #ffffff);
             color: #333;
         }
 
@@ -26,49 +62,38 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-            position: sticky;
+            position: fixed;
             top: 0;
-            z-index: 999;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
         }
 
         header h1 {
-            margin: 0;
-            font-size: 1.6rem;
-            font-weight: 600;
+            font-size: 1.5rem;
         }
 
         nav a {
+            margin: 0 12px;
             color: #fff;
-            margin: 0 10px;
             text-decoration: none;
-            font-weight: bold;
-            position: relative;
+            font-weight: bolder;
         }
 
         nav a:hover,
         nav a.active {
             color: #ffd700;
-        }
-
-        nav a.active::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -4px;
-            width: 100%;
-            height: 2px;
-            background-color: #ffd700;
+            border-bottom: 2px solid #ffd700;
         }
 
         main {
             max-width: 800px;
-            margin: 2rem auto;
+            margin: 6rem auto 2rem;
             background: #fff;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             padding: 2rem;
-            animation: fadeIn 1s ease-in-out;
         }
 
         textarea {
@@ -78,7 +103,6 @@
             border: 1px solid #ccc;
             padding: 1rem;
             font-size: 1rem;
-            resize: vertical;
         }
 
         .stats {
@@ -93,31 +117,16 @@
             padding: 1rem;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
         }
 
         .stat h3 {
-            margin: 0;
-            font-size: 1.2rem;
             color: #007BFF;
+            font-size: 1.2rem;
         }
 
         .stat p {
-            margin: 0.5rem 0 0;
-            font-size: 1.4rem;
             font-weight: bold;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            font-size: 1.4rem;
         }
 
         footer {
@@ -125,7 +134,8 @@
             color: #ccc;
             text-align: center;
             padding: 1rem;
-            margin-top: 2rem;
+            /* margin-top: 2rem; */
+
         }
     </style>
 </head>
@@ -134,9 +144,10 @@
     <header>
         <h1><a href="https://www.wordcounttools.in" style="color: #fff; text-decoration: none;">WebToolCraft</a></h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="tools.html" class="active">Tools</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="tools.html">Tools</a>
             <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
@@ -168,7 +179,8 @@
             </div>
         </div>
     </main>
-    <footer style="background: #222; color: #ccc; text-align: center; padding: 1rem; margin-top: 2rem;">
+
+    <footer style="background: #222; color: #ccc; text-align: center; padding: 1rem; margin-top: 6.6rem;">
         <p style="margin: 0;">
             &copy; 2025
             <a href="https://www.wordcounttools.in/" target="_self" style="color: #ffd700; text-decoration: none;">
@@ -190,7 +202,6 @@
             </a>
         </div>
     </footer>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>AOS.init();</script>
