@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
   <url><loc>https://www.wordcounttools.in/</loc></url>
   <url><loc>https://www.wordcounttools.in/tools.html</loc></url>
   <url><loc>https://www.wordcounttools.in/about.html</loc></url>
   <url><loc>https://www.wordcounttools.in/contact.html</loc></url>
+
+  <!-- Tools Pages -->
   <url><loc>https://www.wordcounttools.in/age-calculator.html</loc></url>
   <url><loc>https://www.wordcounttools.in/BMI-Calculator.html</loc></url>
   <url><loc>https://www.wordcounttools.in/Slug-generator.html</loc></url>
