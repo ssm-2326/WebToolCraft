@@ -4,14 +4,26 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Explore useful online tools like Word Counter, Age Calculator, BMI Calculator, and more on WordCountTools.in" />
 
-    <!-- SEO Meta Tags -->
+    <title>Tools | WebToolCraft</title>
     <meta name="description"
-        content="Explore free tools like Word Counter, BMI Calculator and more on WebToolCraft Tools page." />
-    <meta name="keywords" content="tools, word counter, age calculator, bmi calculator, free online tools" />
+        content="Explore free tools like Word Counter, BMI Calculator, Age Calculator, Line Counter, Remove Extra Spaces, Reading Time Estimator, Case Converter, Password Generator and more on WebToolCraft." />
+    <meta name="keywords"
+        content="tools, word counter, age calculator, bmi calculator, free online tools, WebToolCraft, text tools, line counter, case converter" />
     <meta name="author" content="Sandeep Singh" />
+    <link rel="canonical" href="https://www.wordcounttools.in/tools.html" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png" type="image/png" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- FontAwesome & Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WH77BWSD36"></script>
@@ -22,29 +34,30 @@
         gtag('config', 'G-WH77BWSD36');
     </script>
 
-    <!-- AdSense Script -->
+    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6058277772245913"
         crossorigin="anonymous"></script>
 
-    <!-- Adsterra Script -->
+    <!-- Adsterra -->
     <script type='text/javascript'
         src='//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js'></script>
 
-    <!-- Favicon & Fonts (Optional but Recommended) -->
-    <link rel="icon" href="favicon.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Open Graph Meta (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Free Tools | WebToolCraft" />
+    <meta property="og:description"
+        content="Free powerful tools including Word Counter, BMI Calculator, and more – all in one place on WebToolCraft." />
+    <meta property="og:image" content="https://www.wordcounttools.in/og-image.png" />
+    <meta property="og:url" content="https://www.wordcounttools.in/tools.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="WebToolCraft" />
 
-    <title>Tools | WebToolCraft</title>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Free Tools | WebToolCraft" />
+    <meta name="twitter:description"
+        content="Use free tools like Word Counter, Age Calculator, and more on WebToolCraft." />
+    <meta name="twitter:image" content="https://www.wordcounttools.in/og-image.png" />
 
-
-
-
-    <!-- Icons & Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <style>
         * {
@@ -69,9 +82,8 @@
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
             position: sticky;
             top: 0;
-            z-index: 999;
+            z-index: 1000;
         }
-
 
         header h1 {
             margin: 0;
@@ -79,43 +91,14 @@
             font-weight: 600;
         }
 
-        nav {
-            position: relative;
-        }
-
         nav a {
             margin: 0 12px;
             color: #fff;
             text-decoration: none;
             font-weight: 500;
-            padding-bottom: 4px;
-            position: relative;
             transition: color 0.3s ease;
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #ffd700;
-            transition: width 0.3s ease;
-        }
-
-        nav a:hover::after,
-        nav a[href="tools.html"]::after {
-            width: 100%;
-        }
-
-        nav a:hover {
-            color: #ffd700;
-        }
-
-        nav a[href="tools.html"] {
-            border-bottom: 2px solid #ffd700;
-        }
 
         .intro {
             text-align: center;
@@ -189,8 +172,9 @@
         <h1><a href="https://www.wordcounttools.in" style="color: #fff; text-decoration: none;">WebToolCraft</a></h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="tools.html">Tools</a>
+            <a href="tools.html" class="active">Tools</a>
             <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
