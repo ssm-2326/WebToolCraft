@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Explore our latest blog posts on SEO, writing tools, blogging tips, and more at WebToolCraft." />
+    <meta name="keywords" content="Blog, SEO, Blogging Tips, Content Writing, Writing Tools, WebToolCraft" />
+    <meta name="author" content="Sandeep Singh" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Page Title -->
+    <title>Blog | WebToolCraft</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.wordcounttools.in/blog.html" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Open Graph Meta Tags (for Facebook, LinkedIn) -->
+    <meta property="og:title" content="WebToolCraft Blog - SEO, Tools, and Blogging Tips" />
+    <meta property="og:description"
+        content="Read expert tips and tutorials on SEO, writing tools, and blogging. Stay updated with WebToolCraft's latest blog posts." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.wordcounttools.in/blog.html" />
+    <meta property="og:image" content="https://www.wordcounttools.in/assets/images/blog-preview.jpg" />
+    <!-- replace with actual image -->
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="WebToolCraft Blog - SEO & Writing Tips" />
+    <meta name="twitter:description"
+        content="Discover powerful SEO tricks, content strategies, and useful tools at WebToolCraft Blog." />
+    <meta name="twitter:image" content="https://www.wordcounttools.in/assets/images/blog-preview.jpg" />
+    <!-- replace with actual image -->
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WH77BWSD36"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-WH77BWSD36');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6058277772245913"
+        crossorigin="anonymous"></script>
+
+    <!-- Adsterra -->
+    <script type='text/javascript'
+        src='//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js'></script>
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f5f5;
+            color: #222;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #007BFF;
+            padding: 1rem 2rem;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        header h1 a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav a {
+            margin: 0 12px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        nav a.active,
+        nav a[href="blog.html"] {
+            border-bottom: 2px solid #ffd700;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .blog-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .blog-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .blog-card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 0.7rem;
+            color: #007BFF;
+        }
+
+        .blog-card h2 a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .blog-card p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 0.8rem;
+            color: #007BFF;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #0056b3;
+            text-decoration: underline;
+            margin-left: 5px;
+        }
+
+        footer {
+            background: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ffd700;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><a href="https://www.wordcounttools.in">WebToolCraft</a></h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="tools.html">Tools</a>
+            <a href="about.html">About</a>
+            <a href="blog.html" class="active">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="blog-list">
+            <!-- Blog Card 1 -->
+            <div class="blog-card">
+                <h2><a href="blog-Posts/what-is-word-count.html">What is Word Count and Why It Matters?</a></h2>
+                <p>Discover the importance of word count in writing, blogging, SEO, and professional communication.</p>
+                <a href="blog-Posts/what-is-word-count.html" class="read-more">Read more →</a>
+            </div>
+
+            <!-- Blog Card 2 -->
+            <div class="blog-card">
+                <h2><a href="blog-Posts\10-effective-seo-tips.html.html">10 Effective SEO Tips for New Bloggers</a></h2>
+                <p>Learn how to boost your blog traffic and visibility on Google with these practical SEO tips.</p>
+                <a href="blog-Posts\10-effective-seo-tips.html.html" class="read-more">Read more →</a>
+            </div>
+
+            <!-- Blog Card 3 -->
+            <div class="blog-card">
+                <h2><a href="blog-Posts/5-free-tools-for-writers.html">5 Free Tools Every Content Writer Should Use</a>
+                </h2>
+                <p>Make your writing workflow easier and faster using these powerful tools available online for free.
+                </p>
+                <a href="blog-Posts/5-free-tools-for-writers.html" class="read-more">Read more →</a>
+            </div>
+
+            <!-- Blog Card 4 -->
+            <div class="blog-card">
+                <h2><a href="blog-Posts/top-7-benefits-of-writing-tools.html">Top 7 Benefits of Using Online Writing
+                        Tools</a></h2>
+                <p>Discover how online writing tools can improve your grammar, boost productivity, and simplify content
+                    creation.</p>
+                <a href="blog-Posts/top-7-benefits-of-writing-tools.html" class="read-more">Read more →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2025
+            <a href="https://www.wordcounttools.in/">WebToolCraft</a> | All rights reserved. ❤️
+        </p>
+        <div class="social-icons" style="margin-top: 10px;">
+            <a href="https://www.instagram.com/ssm_2326/profilecard/?igsh=MWVyMG1yZnNwOThmOQ==" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://www.threads.net/@ssm_2326" target="_blank"><i class="fa-brands fa-threads"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100073714513688" target="_blank"><i
+                    class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
