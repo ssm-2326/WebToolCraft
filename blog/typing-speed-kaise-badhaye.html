@@ -117,12 +117,21 @@
             padding-left: 1.2rem;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            margin: 1.5rem 0;
-            border-radius: 10px;
-        }
+      /* ✅ Responsive image wrapper */
+.responsive-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.responsive-img-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
 
         .share-buttons {
             text-align: center;
@@ -226,12 +235,19 @@
         </nav>
     </header>
 
-    <main>
-        <h1>टाइपिंग स्पीड कैसे बढ़ाएं – Free Tools और Tips के साथ</h1>
-        <p><strong>Published:</strong> July 21, 2025</p>
+  <!-- ... (same as before up to <main>) ... -->
 
-<!--         <img src="blog/images/typing.png" alt="Typing Speed Tips"> -->
+<main>
+    <h1>टाइपिंग स्पीड कैसे बढ़ाएं – Free Tools और Tips के साथ</h1>
+    <p><strong>Published:</strong> July 21, 2025</p>
+
+    <!-- ✅ Responsive Image Wrapper -->
+    <div class="responsive-img-wrapper">
         <img src="images/typing.png" alt="Typing Speed" />
+    </div>
+
+    <!-- ...rest of your content continues -->
+
 
 
         <p>आज के समय में टाइपिंग स्पीड सिर्फ़ एक स्किल नहीं, बल्कि हर छात्र और प्रोफेशनल के लिए एक ज़रूरी हुनर बन चुकी
