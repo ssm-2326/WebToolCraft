@@ -199,37 +199,61 @@
         .social-icons a:hover {
             color: #ffd700;
         }
-     blog-card  img {
+    .blog-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.blog-card img {
+  width: 100%;
   max-width: 100%;
   height: auto;
-}
-        <style>
-.thumbnail {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   margin-bottom: 10px;
+  display: block;
 }
-.blog-post {
-  max-width: 700px;
-  margin: 20px auto;
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
+
+.blog-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #007BFF;
 }
-.blog-post h2 a {
+
+.blog-card h2 a {
   text-decoration: none;
-  color: #333;
+  color: inherit;
 }
-.blog-post p {
-  color: #666;
+
+.blog-card p {
+  color: #444;
+  font-size: 0.95rem;
 }
-</style>
 
-        
+.read-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #007BFF;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 
-    </style>
+.read-more:hover {
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
+</style>      
+
 </head>
 
 <body>
@@ -245,12 +269,13 @@
     </header>
 
     <main>
-       <div class="blog-post">
+       <!-- Thumbnail Blog Card (Fully Responsive) -->
+<div class="blog-card">
   <img src="blog/images/typing.png" alt="Typing Speed Thumbnail" class="thumbnail" />
   <h2><a href="blog/typing-speed-kaise-badhaye.html">टाइपिंग स्पीड कैसे बढ़ाएं – Free Tools और Tips के साथ</a></h2>
   <p>जल्दी टाइप करना सीखें – आसान तरीके और फ्री टूल्स के साथ...</p>
+  <a href="blog/typing-speed-kaise-badhaye.html" class="read-more">Read More</a>
 </div>
-
 
 
             <!-- Blog Card 2 -->
