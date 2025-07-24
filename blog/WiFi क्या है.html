@@ -115,6 +115,54 @@
             margin-bottom: 1rem;
             font-size: 1.05rem;
         }
+        .share-buttons {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .share-btn {
+            display: inline-block;
+            margin: 6px;
+            padding: 10px 18px;
+            border-radius: 30px;
+            color: white;
+            font-size: 14px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .share-btn.fb {
+            background: #3b5998;
+        }
+
+        .share-btn.tw {
+            background: #1da1f2;
+        }
+
+        .share-btn.wa {
+            background: #25d366;
+        }
+
+        .share-btn.li {
+            background: #0077b5;
+        }
+
+        .share-btn.tg {
+            background: #0088cc;
+        }
+        .share-btn.th {
+            background: #000000;
+        }
+        .share-btn.pi{
+            background: #E60023;
+        }
+
+        .share-btn:hover {
+            transform: scale(1.05);
+            opacity: 0.85;
+        }
+
+        
 
 
         footer {
@@ -315,6 +363,20 @@ WiFi का पूरा नाम Wireless Fidelity है। यह तकन�
          अगर आपने अब तक अपने घर में WiFi नहीं लगाया है, तो यह सही समय है। साथ ही अपने WiFi नेटवर्क की सुरक्षा पर विशेष ध्यान देना भी जरूरी है।</p>
     </main>
 
+     <!-- 🌐 Social Share -->
+        <div class="share-buttons">
+            <p>📢 Share this article:</p>
+             <a id="fb" class="share-btn fb" target="_blank">Facebook</a>
+             <a id="tw" class="share-btn tw" target="_blank">Twitter</a>
+             <a id="wa" class="share-btn wa" target="_blank">WhatsApp</a>
+             <a id="li" class="share-btn li" target="_blank">LinkedIn</a>
+             <a id="tg" class="share-btn tg" target="_blank">Telegram</a>
+            <a id="threads" class="share-btn th" target="_blank">Threads</a>
+            <a id="pinterest" class="share-btn pi" target="_blank">Pinterest</a>
+
+        </div>
+
+
     <footer style="background: #222; color: #ccc; text-align: center; padding: 1rem; margin-top: 2rem;">
         <p style="margin: 0;">
             &copy; 2025
@@ -337,6 +399,29 @@ WiFi का पूरा नाम Wireless Fidelity है। यह तकन�
             </a>
         </div>
     </footer>
+
+
+     <script>
+  const currentURL = window.location.href;
+  const pageTitle = document.title;
+
+  // Image for Pinterest
+  const pinterestImage = document.querySelector(".main-blog-image"); // Specific class
+  const imageUrl = pinterestImage ? pinterestImage.src : "";
+
+  // Set share URLs
+  document.getElementById('fb').href = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+  document.getElementById('tw').href = `https://twitter.com/intent/tweet?url=${currentURL}&text=${encodeURIComponent(pageTitle)}`;
+  document.getElementById('wa').href = `https://api.whatsapp.com/send?text=${encodeURIComponent(pageTitle + ' - ' + currentURL)}`;
+  document.getElementById('li').href = `https://www.linkedin.com/shareArticle?mini=true&url=${currentURL}`;
+  document.getElementById('tg').href = `https://t.me/share/url?url=${currentURL}&text=${encodeURIComponent(pageTitle)}`;
+  document.getElementById('threads').href = `https://www.threads.net/intent/post?text=${encodeURIComponent(pageTitle + ' ' + currentURL)}`;
+
+  // ✅ Fix Pinterest
+  document.getElementById("pinterest").href =
+    `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(currentURL)}&media=${encodeURIComponent(imageUrl)}&description=${encodeURIComponent(pageTitle)}`;
+</script>
+
 </body>
 
 </html>
