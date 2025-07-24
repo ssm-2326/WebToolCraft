@@ -199,31 +199,33 @@
         .social-icons a:hover {
             color: #ffd700;
         }
-    .blog-card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+   .blog-card {
+  background: #ffffff;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   text-align: left;
+  max-width: 320px;
+  margin: 1rem auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
-.blog-card img {
+.thumbnail-small {
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
   margin-bottom: 10px;
-  display: block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .blog-card h2 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
   color: #007BFF;
 }
@@ -248,17 +250,18 @@
 }
 
 .read-more:hover {
-  margin-left: 5px;
+  margin-left: 6px;
   text-decoration: underline;
 }
-        .thumbnail-small {
-  width: 100%;
-  max-width: 300px; /* choti thumbnail size */
-  height: auto;
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto 10px auto;
+
+/* Responsive Grid Layout */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
 }
+
 
 
 </style>      
@@ -279,7 +282,7 @@
 
     <main>
        <!-- Thumbnail Blog Card (Fully Responsive) -->
-<!-- Blog Thumbnail Card -->
+<!-- Blog Thumbnail Card 1 -->
 <div class="blog-card">
   <img src="blog/images/typing.png" alt="Typing Speed Thumbnail" class="thumbnail-small" />
   <h2><a href="blog/typing-speed-kaise-badhaye.html">टाइपिंग स्पीड कैसे बढ़ाएं – Free Tools और Tips के साथ</a></h2>
@@ -287,16 +290,14 @@
   <a href="blog/typing-speed-kaise-badhaye.html" class="read-more">Read More</a>
 </div>
 
+<!-- Blog Thumbnail Card 2 -->
+<div class="blog-card">
+  <img src="blog/images/wifi-kya-hai.png" alt="WiFi क्या है Thumbnail" class="thumbnail-small" />
+  <h2><a href="blog/wifi-kya-hai.html">WiFi क्या है? आसान भाषा में पूरी जानकारी</a></h2>
+  <p>बिना तार के इंटरनेट देने वाली तकनीक की पूरी प्रक्रिया?</p>
+  <a href="blog/wifi-kya-hai.html" class="read-more">Read More</a>
+</div>
 
-
-            <!-- Blog Card 2 -->
-            <div class="blog-card">
-                 <img src="blog/images/Wi-Fi.png" alt="WiFi क्या है" class="thumbnail-small" />
-                <h2><a href="blog/WiFi क्या है.html">WiFi क्या है? आसान भाषा में पूरी जानकारी</a></h2>
-                <p>बिना तार के इंटरनेट देने वाली तकनीक की पूरी प्रक्रिया? </p>
-               <a href="blog/WiFi क्या है.html">Read More</a>
-
-            </div>
 
             <!-- Blog Card 3 -->
             <div class="blog-card">
