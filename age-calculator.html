@@ -129,12 +129,6 @@
     nav a[href="index.html"] {
       border-bottom: 2px solid #ffd700;
     }
-     main {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-      animation: fadeIn 0.8s ease-in-out;
-    }
 
     .menu-toggle {
       display: none;
@@ -299,6 +293,21 @@
         text-align: center;
       }
     }
+
+    /* main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      animation: fadeIn 0.8s ease-in-out;
+    } */
+    main {
+      max-width: 800px;
+      margin: 6rem auto 2rem;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+    }
   </style>
 </head>
 
@@ -326,13 +335,14 @@
       <i class="fas fa-bars"></i>
     </div>
   </header>
-
-  <div class="container" data-aos="zoom-in">
-    <h2 class="animate__animated animate__fadeInDown">🔢 Age Calculator</h2>
-    <input type="date" id="dob">
-    <button onclick="calculateAge()">Calculate Age</button>
-    <div class="result" id="result"></div>
-  </div>
+  <main>
+    <div class="container" data-aos="zoom-in">
+      <h2 class="animate__animated animate__fadeInDown">🔢 Age Calculator</h2>
+      <input type="date" id="dob">
+      <button onclick="calculateAge()">Calculate Age</button>
+      <div class="result" id="result"></div>
+    </div>
+  </main>
 
   <footer>
     <p style="margin: 0;">
