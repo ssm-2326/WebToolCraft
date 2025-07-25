@@ -47,12 +47,17 @@
             box-sizing: border-box;
         }
 
-        html,
         body {
-            height: 100%;
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #e0f7fa, #ffffff);
-            color: #333;
+            background: #f5f5f5;
+            color: #222;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         header {
@@ -62,16 +67,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
+
+
         header h1 {
-            font-size: 1.5rem;
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 600;
         }
 
         nav a {
@@ -81,10 +88,50 @@
             font-weight: bolder;
         }
 
-        nav a:hover,
-        nav a.active {
+
+        nav a:hover {
             color: #ffd700;
+        }
+
+        nav a.active {
             border-bottom: 2px solid #ffd700;
+        }
+
+        nav a[href="index.html"] {
+            border-bottom: 2px solid #ffd700;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        /* ✅ Mobile Responsive & Animation */
+        @media (max-width: 768px) {
+            nav {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: #007BFF;
+                flex-direction: column;
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+                transition: max-height 0.4s ease, opacity 0.4s ease;
+            }
+
+            nav.show {
+                max-height: 300px;
+                /* Enough height for menu items */
+                opacity: 1;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
         }
 
         main {
@@ -135,7 +182,73 @@
             text-align: center;
             padding: 1rem;
             /* margin-top: 2rem; */
+        }
 
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            position: absolute;
+            background-color: #007BFF;
+            min-width: 180px;
+            display: none;
+            flex-direction: column;
+            animation: fadeSlide 0.3s ease;
+            z-index: 100;
+        }
+
+        /* Dropdown links */
+        .dropdown-content a {
+            padding: 10px 16px;
+            color: #fff;
+            text-align: left;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hover Show (Desktop) */
+        .dropdown:hover .dropdown-content {
+            display: flex;
+        }
+
+        /* Animation */
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ✅ Responsive (mobile toggle open) */
+        @media (max-width: 768px) {
+            .dropdown {
+                width: 100%;
+            }
+
+            .dropdown-content {
+                position: relative;
+                min-width: 100%;
+                display: none;
+                animation: none;
+            }
+
+            .dropdown.open .dropdown-content {
+                display: flex;
+            }
+
+            nav a,
+            .dropdown-content a {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -143,13 +256,26 @@
 <body>
     <header>
         <h1><a href="https://www.wordcounttools.in" style="color: #fff; text-decoration: none;">WebToolCraft</a></h1>
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="tools.html">Tools</a>
-            <a href="about.html">About</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
+        <nav id="navbar" class="nav">
+            <a href="../index.html" class="active">Home</a>
+            <a href="../tools.html">Tools</a>
+            <a href="../about.html">About</a>
+
+            <!-- Blog with Dropdown -->
+            <div class="dropdown">
+                <a href="../blog.html">Blog</a>
+                <div class="dropdown-content">
+                    <a href="categories/computer-basic.html">Computer Basic</a>
+                    <a href="categories/internet-basic.html">Internet Basic</a>
+                </div>
+            </div>
+
+            <a href="../contact.html">Contact</a>
         </nav>
+
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
 
     <main data-aos="fade-up">
@@ -235,6 +361,23 @@
             const minutes = words / wordsPerMinute;
             return minutes < 1 ? `${Math.ceil(minutes * 60)} sec` : `${Math.round(minutes)} min`;
         }
+    </script>
+
+    <script>
+        const toggleBtn = document.getElementById('menu-toggle');
+        const nav = document.getElementById('navbar');
+
+        toggleBtn.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
+
+        // Mobile dropdown open/close
+        const dropdown = document.querySelector('.dropdown');
+        dropdown.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                dropdown.classList.toggle('open');
+            }
+        });
     </script>
 </body>
 
