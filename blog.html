@@ -4,21 +4,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Explore our latest blog posts on SEO, writing tools, blogging tips, and more at WebToolCraft." />
-    <meta name="keywords" content="Blog, SEO, Blogging Tips, Content Writing, Writing Tools, WebToolCraft ,wi-fi kya hai" />
+    <meta name="description"
+        content="Explore our latest blog posts on SEO, writing tools, blogging tips, and more at WebToolCraft." />
+    <meta name="keywords"
+        content="Blog, SEO, Blogging Tips, Content Writing, Writing Tools, WebToolCraft ,wi-fi kya hai" />
     <meta name="author" content="Sandeep Singh" />
     <meta name="robots" content="index, follow" />
     <title>Blog | WebToolCraft</title>
     <link rel="canonical" href="https://www.wordcounttools.in/blog.html" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <meta property="og:title" content="WebToolCraft Blog - SEO, Tools, and Blogging Tips" />
-    <meta property="og:description" content="Read expert tips and tutorials on SEO, writing tools, and blogging. Stay updated with WebToolCraft's latest blog posts." />
+    <meta property="og:description"
+        content="Read expert tips and tutorials on SEO, writing tools, and blogging. Stay updated with WebToolCraft's latest blog posts." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.wordcounttools.in/blog.html" />
     <meta property="og:image" content="https://www.wordcounttools.in/assets/images/blog-preview.jpg" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="WebToolCraft Blog - SEO & Writing Tips" />
-    <meta name="twitter:description" content="Discover powerful SEO tricks, content strategies, and useful tools at WebToolCraft Blog." />
+    <meta name="twitter:description"
+        content="Discover powerful SEO tricks, content strategies, and useful tools at WebToolCraft Blog." />
     <meta name="twitter:image" content="https://www.wordcounttools.in/assets/images/blog-preview.jpg" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -32,8 +36,10 @@
         gtag('config', 'G-WH77BWSD36');
     </script>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6058277772245913" crossorigin="anonymous"></script>
-    <script type='text/javascript' src='//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js'></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6058277772245913"
+        crossorigin="anonymous"></script>
+    <script type='text/javascript'
+        src='//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js'></script>
 
     <style>
         * {
@@ -64,9 +70,10 @@
             z-index: 1000;
         }
 
-        header h1 a {
-            color: #fff;
-            text-decoration: none;
+        header h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 600;
         }
 
         nav a {
@@ -84,19 +91,78 @@
             border-bottom: 2px solid #ffd700;
         }
 
+        nav a[href="../blog.html"] {
+            border-bottom: 2px solid #ffd700;
+        }
+
+
+        /* nav a:hover {
+            color: #ffd700;
+        }
+
+        nav a.active {
+            border-bottom: 2px solid #ffd700;
+        } */
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        /* ✅ Mobile Responsive & Animation */
+        @media (max-width: 768px) {
+            nav {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: #007BFF;
+                flex-direction: column;
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+                transition: max-height 0.4s ease, opacity 0.4s ease;
+            }
+
+            nav.show {
+                max-height: 300px;
+                /* Enough height for menu items */
+                opacity: 1;
+            }
+
+            nav a {
+                padding: 12px;
+                display: block;
+                text-align: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+
         main {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        /* main {
             flex: 1;
             max-width: 1200px;
             margin: 2rem auto;
             padding: 0 1rem;
-        }
+        } */
 
         .blog-grid {
             display: grid;
-           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
         }
-       
+
 
 
         .blog-card {
@@ -155,6 +221,7 @@
             color: #ccc;
             text-align: center;
             padding: 1rem;
+            margin-top: 2rem;
         }
 
         footer a {
@@ -170,19 +237,100 @@
         .social-icons a:hover {
             color: #ffd700;
         }
+
+
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            position: absolute;
+            background-color: #007BFF;
+            min-width: 180px;
+            display: none;
+            flex-direction: column;
+            animation: fadeSlide 0.3s ease;
+            z-index: 100;
+        }
+
+        /* Dropdown links */
+        .dropdown-content a {
+            padding: 10px 16px;
+            color: #fff;
+            text-align: left;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hover Show (Desktop) */
+        .dropdown:hover .dropdown-content {
+            display: flex;
+        }
+
+        /* Animation */
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ✅ Responsive (mobile toggle open) */
+        @media (max-width: 768px) {
+            .dropdown {
+                width: 100%;
+            }
+
+            .dropdown-content {
+                position: relative;
+                min-width: 100%;
+                display: none;
+                animation: none;
+            }
+
+            .dropdown.open .dropdown-content {
+                display: flex;
+            }
+
+            nav a,
+            .dropdown-content a {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1><a href="https://www.wordcounttools.in">WebToolCraft</a></h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="tools.html">Tools</a>
-            <a href="about.html">About</a>
-            <a href="blog.html" class="active">Blog</a>
-            <a href="contact.html">Contact</a>
+        <h1><a href="https://www.wordcounttools.in" style="color: #fff; text-decoration: none;">WebToolCraft</a></h1>
+        <nav id="navbar" class="nav">
+            <a href="../index.html">Home</a>
+            <a href="../tools.html">Tools</a>
+            <a href="../about.html">About</a>
+
+            <!-- Blog with Dropdown -->
+            <div class="dropdown">
+                <a href="../blog.html" class="active">Blog</a>
+                <div class="dropdown-content">
+                    <a href="categories/computer-basic.html">Computer Basic</a>
+                    <a href="categories/internet-basic.html">Internet Basic</a>
+                </div>
+            </div>
+
+            <a href="../contact.html">Contact</a>
         </nav>
+
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
 
     <main>
@@ -190,9 +338,10 @@
             <div class="blog-card">
                 <a href="blog/typing-speed-kaise-badhaye.html">
                     <img src="blog/images/typing.png" alt="Typing Speed Thumbnail" class="thumbnail-small" />
-<!--                     <img src="blog-Posts\image\typing.png" alt="Typing Speed Thumbnail" class="thumbnail-small" /> -->
+                    <!--                     <img src="blog-Posts\image\typing.png" alt="Typing Speed Thumbnail" class="thumbnail-small" /> -->
                 </a>
-                <h2><a href="blog-Posts\typing-speed-kaise-badhaye.html">टाइपिंग स्पीड कैसे बढ़ाएं – Free Tools और Tips के साथ</a></h2>
+                <h2><a href="blog-Posts\typing-speed-kaise-badhaye.html">टाइपिंग स्पीड कैसे बढ़ाएं – Free Tools और Tips
+                        के साथ</a></h2>
                 <p>जल्दी टाइप करना सीखें – आसान तरीके और फ्री टूल्स के साथ...</p>
                 <a href="blog\typing-speed-kaise-badhaye.html" class="read-more">Read More</a>
             </div>
@@ -208,31 +357,68 @@
 
             <div class="blog-card">
                 <h2><a href="blog/5-free-tools-for-writers.html">5 Free Tools Every Content Writer Should Use</a></h2>
-                <p>Make your writing workflow easier and faster using these powerful tools available online for free.</p>
+                <p>Make your writing workflow easier and faster using these powerful tools available online for free.
+                </p>
                 <a href="blog/5-free-tools-for-writers.html" class="read-more">Read More</a>
             </div>
 
             <div class="blog-card">
-                <h2><a href="blog/top-7-benefits-of-writing-tools.html">Top 7 Benefits of Using Online Writing Tools</a></h2>
-                <p>Discover how online writing tools can improve your grammar, boost productivity, and simplify content creation.</p>
+                <h2><a href="blog/top-7-benefits-of-writing-tools.html">Top 7 Benefits of Using Online Writing Tools</a>
+                </h2>
+                <p>Discover how online writing tools can improve your grammar, boost productivity, and simplify content
+                    creation.</p>
                 <a href="blog/top-7-benefits-of-writing-tools.html" class="read-more">Read More</a>
             </div>
         </div>
     </main>
 
-  <footer>
-        <p>
-            &copy; 2025
-            <a href="https://www.wordcounttools.in/">WebToolCraft</a> | All rights reserved. ❤️
+    <footer>
+        &copy; 2025
+        <a href="https://www.wordcounttools.in/" target="_self" style="color: #ffd700; text-decoration: none;">
+            WebToolCraft
+        </a> | All rights reserved. ❤️
         </p>
-        <div class="social-icons" style="margin-top: 10px;">
-            <a href="https://www.instagram.com/ssm_2326/profilecard/?igsh=MWVyMG1yZnNwOThmOQ==" target="_blank"><i
-                    class="fab fa-instagram"></i></a>
-            <a href="https://www.threads.net/@ssm_2326" target="_blank"><i class="fa-brands fa-threads"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=100073714513688" target="_blank"><i
-                    class="fab fa-facebook"></i></a>
+        <div style="margin-top: 10px;">
+            <a href="https://www.instagram.com/ssm_2326/profilecard/?igsh=MWVyMG1yZnNwOThmOQ==" target="_blank"
+                style="color: #fff; margin: 0 10px; font-size: 1.3rem;">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.threads.net/@ssm_2326" target="_blank"
+                style="color: #fff; margin: 0 10px; font-size: 1.3rem;">
+                <i class="fa-brands fa-threads"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100073714513688" target="_blank"
+                style="color: #fff; margin: 0 10px; font-size: 1.3rem;">
+                <i class="fab fa-facebook"></i>
+            </a>
         </div>
     </footer>
+
+    <script>
+        const toggleBtn = document.getElementById('menu-toggle');
+        const nav = document.getElementById('navbar');
+
+        toggleBtn.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
+
+        // Mobile dropdown open/close
+        const dropdown = document.querySelector('.dropdown');
+        dropdown.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                dropdown.classList.toggle('open');
+            }
+        });
+    </script>
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
