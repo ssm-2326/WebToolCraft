@@ -3,12 +3,13 @@
 
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Remove Extra Spaces - WebToolCraft</title>
-  <meta name="description" content="Remove extra spaces from your text quickly and easily." />
-  <meta name="keywords" content="Remove Extra Spaces, Text Formatter, Clean Text Tool, WebToolCraft" />
-  <meta name="author" content="Sandeep Singh" />
+ <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Remove Extra Spaces Online - Clean Your Text | WebToolCraft</title>
+<meta name="description" content="Remove extra spaces from your text online instantly using WebToolCraft's free space cleaner tool. Perfect for formatting, writing, and content editing." />
+<meta name="keywords" content="Remove Extra Spaces, Online Space Remover, Text Formatter, Clean Text Tool, WebToolCraft Tools" />
+<meta name="author" content="Sandeep Singh" />
+
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.wordcounttools.in/remove-extra-spaces.html" />
@@ -16,19 +17,20 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="../favicon.png" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Remove Extra Spaces - WebToolCraft" />
-  <meta property="og:description" content="Remove extra spaces from your text quickly and easily." />
-  <meta property="og:image" content="https://www.wordcounttools.in/og-image.png" />
-  <meta property="og:url" content="https://www.wordcounttools.in/remove-extra-spaces.html" />
-  <meta property="og:site_name" content="WebToolCraft" />
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Remove Extra Spaces Online – Clean Text Instantly | WebToolCraft" />
+<meta property="og:description" content="Remove unwanted extra spaces from your text online in one click using WebToolCraft's free space cleaner tool." />
+<meta property="og:image" content="https://www.wordcounttools.in/assets/images/og/remove-extra-spaces-og.jpg" />
+<meta property="og:url" content="https://www.wordcounttools.in/remove-extra-spaces.html" />
+<meta property="og:site_name" content="WebToolCraft" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Remove Extra Spaces - WebToolCraft" />
-  <meta name="twitter:description" content="Remove extra spaces from your text quickly and easily." />
-  <meta name="twitter:image" content="https://www.wordcounttools.in/og-image.png" />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Remove Extra Spaces – Free Online Text Cleaner | WebToolCraft" />
+<meta name="twitter:description" content="Clean your text instantly with WebToolCraft's extra space remover tool. No ads, no distractions." />
+<meta name="twitter:image" content="https://www.wordcounttools.in/assets/images/og/remove-extra-spaces-og.jpg" />
+
 
   <!-- Fonts & Animations -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -66,11 +68,17 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #e0ecff, #ffffff);
-      min-height: 100vh;
+      background: #f5f5f5;
+      color: #222;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
 
     header {
       background: #007BFF;
@@ -85,15 +93,19 @@
       z-index: 1000;
     }
 
+
+
     header h1 {
+      margin: 0;
       font-size: 1.6rem;
+      font-weight: 600;
     }
 
     nav a {
       margin: 0 12px;
       color: #fff;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: bolder;
     }
 
     nav a:hover {
@@ -104,15 +116,62 @@
       border-bottom: 2px solid #ffd700;
     }
 
+    nav a[href="index.html"] {
+      border-bottom: 2px solid #ffd700;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    /* ✅ Mobile Responsive & Animation */
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #007BFF;
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+      }
+
+      nav.show {
+        max-height: 300px;
+        /* Enough height for menu items */
+        opacity: 1;
+      }
+
+      nav a {
+        padding: 12px;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+
     main {
-      flex: 1;
+      max-width: 800px;
+      margin: 6rem auto 2rem;
+
     }
 
     .container {
       max-width: 800px;
       margin: 2rem auto;
       background: white;
-      padding: 2rem;
+      padding: 2.5rem;
       border-radius: 15px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
@@ -145,6 +204,73 @@
       color: black;
     }
 
+    /* Dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+      position: absolute;
+      background-color: #007BFF;
+      min-width: 180px;
+      display: none;
+      flex-direction: column;
+      animation: fadeSlide 0.3s ease;
+      z-index: 100;
+    }
+
+    /* Dropdown links */
+    .dropdown-content a {
+      padding: 10px 16px;
+      color: #fff;
+      text-align: left;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Hover Show (Desktop) */
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+
+    /* Animation */
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ✅ Responsive (mobile toggle open) */
+    @media (max-width: 768px) {
+      .dropdown {
+        width: 100%;
+      }
+
+      .dropdown-content {
+        position: relative;
+        min-width: 100%;
+        display: none;
+        animation: none;
+      }
+
+      .dropdown.open .dropdown-content {
+        display: flex;
+      }
+
+      nav a,
+      .dropdown-content a {
+        text-align: center;
+      }
+    }
+
     footer {
       background: #222;
       color: #ccc;
@@ -173,13 +299,26 @@
 <body>
   <header>
     <h1><a href="https://www.wordcounttools.in" style="color: #fff; text-decoration: none;">WebToolCraft</a></h1>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="tools.html">Tools</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
+    <nav id="navbar" class="nav">
+      <a href="../index.html" class="active">Home</a>
+      <a href="../tools.html">Tools</a>
+      <a href="../about.html">About</a>
+
+      <!-- Blog with Dropdown -->
+      <div class="dropdown">
+        <a href="../blog.html">Blog</a>
+        <div class="dropdown-content">
+          <a href="categories/computer-basic.html">Computer Basic</a>
+          <a href="categories/internet-basic.html">Internet Basic</a>
+        </div>
+      </div>
+
+      <a href="../contact.html">Contact</a>
     </nav>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
   </header>
 
   <main>
@@ -225,6 +364,24 @@
       document.execCommand("copy");
       alert("Text copied!");
     }
+  </script>
+
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const nav = document.getElementById('navbar');
+
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+
+    // Mobile dropdown open/close
+    const dropdown = document.querySelector('.dropdown');
+    dropdown.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        dropdown.classList.toggle('open');
+      }
+    });
   </script>
 </body>
 
