@@ -524,6 +524,35 @@
       }
     });
   </script>
+     <script>
+        const currentURL = window.location.href;
+        const pageTitle = document.title;
+
+        // Image for Pinterest
+        const pinterestImage = document.querySelector(".main-blog-image"); // Specific class
+        const imageUrl = pinterestImage ? pinterestImage.src : "";
+
+        // Set share URLs
+        document.getElementById('fb').href = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+        document.getElementById('tw').href = `https://twitter.com/intent/tweet?url=${currentURL}&text=${encodeURIComponent(pageTitle)}`;
+        document.getElementById('wa').href = `https://api.whatsapp.com/send?text=${encodeURIComponent(pageTitle + ' - ' + currentURL)}`;
+        document.getElementById('li').href = `https://www.linkedin.com/shareArticle?mini=true&url=${currentURL}`;
+        document.getElementById('tg').href = `https://t.me/share/url?url=${currentURL}&text=${encodeURIComponent(pageTitle)}`;
+        document.getElementById('threads').href = `https://www.threads.net/intent/post?text=${encodeURIComponent(pageTitle + ' ' + currentURL)}`;
+
+        // ✅ Fix Pinterest
+        document.getElementById("pinterest").href =
+            `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(currentURL)}&media=${encodeURIComponent(imageUrl)}&description=${encodeURIComponent(pageTitle)}`;
+    </script>
+
+    <script>
+        const toggleBtn = document.getElementById('menu-toggle');
+        const nav = document.getElementById('navbar');
+
+        toggleBtn.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
+    </script>
 </body>
 
 </html>
