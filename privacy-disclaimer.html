@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Privacy Policy - WebToolCraft tools and data handling transparency" />
-  <title>Privacy Policy - WebToolCraft</title>
+  <title>Privacy Policy & Disclaimer - WebToolCraft</title>
 
   <meta name="keywords" content="privacy policy, data protection, WebToolCraft terms" />
   <meta name="author" content="Sandeep Singh" />
@@ -13,7 +13,8 @@
   <meta name="google-adsense-account" content="ca-pub-6058277772245913">
 
   <!-- Google Fonts & Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -28,14 +29,22 @@
   </script>
 
   <!-- AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6058277772245913" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6058277772245913"
+    crossorigin="anonymous"></script>
 
   <!-- Adsterra Script -->
-  <script type='text/javascript' src='//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js'></script>
+  <script type='text/javascript'
+    src='//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js'></script>
+
 
   <!-- Same Styles from about.html -->
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: #f5f5f5;
@@ -44,7 +53,11 @@
       flex-direction: column;
       min-height: 100vh;
     }
-    html { scroll-behavior: smooth; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     header {
       background: #007BFF;
       padding: 1rem 2rem;
@@ -57,11 +70,13 @@
       top: 0;
       z-index: 1000;
     }
+
     header h1 {
       margin: 0;
       font-size: 1.6rem;
       font-weight: 600;
     }
+
     nav a {
       margin: 0 12px;
       color: #fff;
@@ -69,16 +84,22 @@
       font-weight: 500;
       transition: color 0.3s ease;
     }
-    nav a:hover { color: #ffd700; }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
     nav a[href="privacy.html"] {
       border-bottom: 2px solid #ffd700;
     }
+
     .menu-toggle {
       display: none;
       font-size: 1.8rem;
       cursor: pointer;
       color: #fff;
     }
+
     @media (max-width: 768px) {
       nav {
         position: absolute;
@@ -92,9 +113,22 @@
         opacity: 0;
         transition: max-height 0.4s ease, opacity 0.4s ease;
       }
-      nav.show { max-height: 300px; opacity: 1; }
-      nav a { padding: 12px; display: block; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
-      .menu-toggle { display: block; }
+
+      nav.show {
+        max-height: 300px;
+        opacity: 1;
+      }
+
+      nav a {
+        padding: 12px;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .menu-toggle {
+        display: block;
+      }
     }
 
     main {
@@ -102,12 +136,14 @@
       margin: 3rem auto;
       padding: 0 1rem;
     }
+
     main h2 {
       font-size: 2.5rem;
       color: #007BFF;
       text-align: center;
       margin-bottom: 20px;
     }
+
     main p {
       font-size: 1.2rem;
       line-height: 1.7;
@@ -125,7 +161,11 @@
     }
 
     /* Dropdown */
-    .dropdown { position: relative; display: inline-block; }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
     .dropdown-content {
       position: absolute;
       background-color: #007BFF;
@@ -135,6 +175,7 @@
       animation: fadeSlide 0.3s ease;
       z-index: 100;
     }
+
     .dropdown-content a {
       padding: 10px 16px;
       color: #fff;
@@ -142,22 +183,53 @@
       text-decoration: none;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .dropdown:hover .dropdown-content { display: flex; }
+
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+
     @keyframes fadeSlide {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 768px) {
-      .dropdown { width: 100%; }
+      .dropdown {
+        width: 100%;
+      }
+
       .dropdown-content {
         position: relative;
         min-width: 100%;
         display: none;
         animation: none;
       }
-      .dropdown.open .dropdown-content { display: flex; }
-      nav a, .dropdown-content a { text-align: center; }
+
+      .dropdown.open .dropdown-content {
+        display: flex;
+      }
+
+      nav a,
+      .dropdown-content a {
+        text-align: center;
+      }
+    }
+
+    .brand-link {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    .brand-link:hover {
+      color: #00aaff;
+      /* Blue hover color */
     }
   </style>
 </head>
@@ -182,56 +254,88 @@
   </header>
 
   <main>
-    <h2 class="animate__animated animate__fadeInDown">Privacy Policy</h2>
+    <h2 class="animate__animated animate__fadeInDown">Privacy Policy & Disclaimer</h2>
+
     <p class="animate__animated animate__fadeInUp">
-      WebToolCraft (powered by wordcounttools.in) values your privacy. We do not collect personally identifiable information unless you choose to provide it.
+      WebToolCraft (powered by wordcounttools.in) values your privacy. We do not collect personally identifiable
+      information unless you choose to provide it.
     </p>
+
     <p>
-      Our tools function entirely in your browser. We don’t save your input or output data on our servers. Cookies may be used by third-party services like Google Analytics and AdSense for analytics and advertising personalization.
+      Our tools operate entirely within your browser. We do not store any input or output data on our servers. However,
+      third-party services such as Google Analytics and Google AdSense may use cookies and scripts to enhance your
+      browsing experience and serve relevant ads.
     </p>
+
     <p>
-      By using our website, you agree to the use of cookies and third-party scripts which help us improve user experience and provide ad-supported content.
+      By continuing to use our website, you agree to the use of cookies and third-party technologies for analytics,
+      personalization, and advertisements.
     </p>
+
     <p>
-      For further queries, please reach out via our <a href="../contact.html">Contact</a> page.
+      We are not liable for the accuracy, reliability, or effectiveness of the tools or information provided. The
+      content on this site is for informational and educational purposes only. Use of the tools and information is
+      entirely at your own risk.
     </p>
+
+    <p>
+      This website may contain links to external websites. We are not responsible for the content, accuracy, or privacy
+      practices of those third-party websites.
+    </p>
+
+    <p>
+      Some of the links or advertisements on our site may be affiliate-based, which means we may earn a small commission
+      if you make a purchase through those links—at no extra cost to you.
+    </p>
+
+    <p>
+      For questions, feedback, or concerns, please contact us via the <a href="../contact.html">Contact</a> page.
+    </p>
+
+    <p><strong>Last Updated:</strong> July 2025</p>
   </main>
 
- <footer style="background-color: #222; color: #fff; padding: 15px 20px;">
-  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; max-width: 1200px; margin: auto;">
-    
-    <!-- Left: Copyright -->
-    <div style="flex: 1; text-align: left; min-width: 200px;">
-      <p style="margin: 0;">
-        &copy; 2025
-        <a href="https://www.wordcounttools.in/" style="color: #ffd700; text-decoration: none;">
-          WebToolCraft
-        </a> | All rights reserved. ❤️
-      </p>
-    </div>
 
-    <!-- Center: Social Icons -->
-    <div style="flex: 1; display: flex; justify-content: center; gap: 15px; min-width: 200px; margin: 10px 0;">
-      <a href="https://www.instagram.com/ssm_2326/profilecard/?igsh=MWVyMG1yZnNwOThmOQ==" target="_blank" style="color: #fff; font-size: 1.3rem;">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.threads.net/@ssm_2326" target="_blank" style="color: #fff; font-size: 1.3rem;">
-        <i class="fa-brands fa-threads"></i>
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=100073714513688" target="_blank" style="color: #fff; font-size: 1.3rem;">
-        <i class="fab fa-facebook"></i>
-      </a>
-    </div>
+  <footer style="background-color: #111; color: #eee; padding: 40px 20px; font-family: 'Segoe UI', sans-serif;">
+    <div
+      style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; text-align: center;">
 
-    <!-- Right: Privacy Policy -->
-    <div style="flex: 1; text-align: right; min-width: 200px;">
-      <a href="privacy.html" style="color: #ccc; text-decoration: underline; font-size: 0.9rem;" class="active">
-        Privacy Policy
-      </a>
-    </div>
+      <!-- Branding & Copyright -->
+      <div style="flex: 1 1 250px;">
+        <h2 style="margin: 0;">
+          <a href="index.html" class="brand-link" style="color: #ffd700; text-decoration: none;">
+            WebToolCraft
+          </a>
+        </h2>
+        <p style="font-size: 0.9rem; margin: 10px 0;">Empowering your web tools experience 🚀</p>
+        <p style="font-size: 0.8rem; color: #aaa;">&copy; 2025 WebToolCraft. All rights reserved.</p>
+      </div>
 
-  </div>
-</footer>
+      <!-- Navigation Links -->
+      <div style="flex: 1 1 200px;">
+        <h4 style="margin-bottom: 10px; color: #ffd700;">Quick Links</h4>
+        <a href="privacy-policy.html" style="color: #ccc; text-decoration: none; display: block; margin: 5px 0;">Privacy
+          & Disclaimer</a>
+        <a href="terms.html" style="color: #ccc; text-decoration: none; display: block; margin: 5px 0;">Terms &
+          Conditions</a>
+      </div>
+
+      <!-- Social Media -->
+      <div style="flex: 1 1 200px;">
+        <h4 style="margin-bottom: 10px; color: #ffd700;">Follow Us</h4>
+        <div style="display: flex; justify-content: center; gap: 15px; font-size: 1.5rem;">
+          <a href="https://www.instagram.com/ssm_2326/" target="_blank" style="color: #fff;"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://www.threads.net/@ssm_2326" target="_blank" style="color: #fff;"><i
+              class="fa-brands fa-threads"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100073714513688" target="_blank" style="color: #fff;"><i
+              class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
