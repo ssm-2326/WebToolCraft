@@ -4,32 +4,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Password Generator - WebToolCraft</title>
-  <meta name="description" content="Generate strong and secure passwords easily with our password generator tool." />
-  <meta name="keywords" content="Password Generator, Secure Password, Online Tool, WebToolCraft" />
+  <title>Line Counter - WebToolCraft</title>
+  <meta name="description" content="Count the total number of non-empty lines in your text easily and quickly." />
+  <meta name="keywords" content="Line Counter, Text Tools, Count Lines, WebToolCraft, Online Tool" />
   <meta name="author" content="Sandeep Singh" />
   <meta name="google-adsense-account" content="ca-pub-6058277772245913">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.wordcounttools.in/password-generator.html" />
+  <link rel="canonical" href="https://www.wordcounttools.in/line-counter.html" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="../favicon.png" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Password Generator - WebToolCraft" />
+  <meta property="og:title" content="Line Counter - WebToolCraft" />
   <meta property="og:description"
-    content="Generate strong and secure passwords easily with our password generator tool." />
+    content="Count the total number of non-empty lines in your text easily and quickly." />
   <meta property="og:image" content="https://www.wordcounttools.in/og-image.png" />
-  <meta property="og:url" content="https://www.wordcounttools.in/password-generator.html" />
+  <meta property="og:url" content="https://www.wordcounttools.in/line-counter.html" />
   <meta property="og:site_name" content="WebToolCraft" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Password Generator - WebToolCraft" />
+  <meta name="twitter:title" content="Line Counter - WebToolCraft" />
   <meta name="twitter:description"
-    content="Generate strong and secure passwords easily with our password generator tool." />
+    content="Count the total number of non-empty lines in your text easily and quickly." />
   <meta name="twitter:image" content="https://www.wordcounttools.in/og-image.png" />
 
   <!-- Fonts & Animations -->
@@ -55,7 +55,6 @@
   <!-- Adsterra -->
   <script type='text/javascript'
     src='//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js'></script>
-
 
 
   <style>
@@ -92,9 +91,7 @@
     }
 
 
-
-    header h1 {
-      margin: 0;
+    header h2 {
       font-size: 1.6rem;
       font-weight: 600;
     }
@@ -159,8 +156,7 @@
       }
     }
 
-    /* Main content */
-    main,
+    /* Main container */
     .container {
       max-width: 800px;
       margin: 2rem auto;
@@ -169,31 +165,25 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       padding: 2rem;
       animation: fadeIn 1s ease-in-out;
-      flex: 1;
       display: flex;
       flex-direction: column;
       gap: 1rem;
       text-align: center;
+      flex: 1;
     }
 
-    label {
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-
-    input[type="number"] {
-      padding: 0.6rem 1rem;
-      margin-top: 0.5rem;
-      margin-bottom: 1.5rem;
-      width: 100px;
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 1rem;
+      font-size: 1rem;
       border-radius: 10px;
       border: 1px solid #ccc;
-      font-size: 1rem;
+      resize: none;
       transition: border-color 0.3s ease;
-      text-align: center;
     }
 
-    input[type="number"]:focus {
+    textarea:focus {
       outline: none;
       border-color: #007BFF;
       box-shadow: 0 0 5px #007BFF;
@@ -202,14 +192,14 @@
     button.btn {
       background-color: #007BFF;
       color: white;
-      padding: 0.75rem 2rem;
-      font-weight: 600;
       border: none;
+      padding: 0.75rem 1.5rem;
       border-radius: 10px;
+      font-weight: 600;
       cursor: pointer;
-      transition: background-color 0.3s ease;
       max-width: 250px;
       align-self: center;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     button.btn:hover {
@@ -217,13 +207,12 @@
       color: #000;
     }
 
-    #passwordOutput {
-      margin-top: 1.5rem;
-      font-size: 1.3rem;
+    #output {
+      font-size: 1.2rem;
       font-weight: 700;
-      word-break: break-word;
       color: #007BFF;
       min-height: 2rem;
+      margin-top: 1rem;
     }
 
     /* Footer */
@@ -317,7 +306,6 @@
 </head>
 
 <body>
-
   <header>
     <h1><a href="https://www.wordcounttools.in" style="color: #fff; text-decoration: none;">WebToolCraft</a></h1>
     <nav id="navbar" class="nav">
@@ -342,12 +330,11 @@
     </div>
   </header>
 
-  <main data-aos="fade-up" class="container">
-    <label for="length">Password Length:</label>
-    <input type="number" id="length" min="4" max="50" value="12" />
-    <button class="btn" onclick="generatePassword()">🔐 Generate Password</button>
-    <div id="passwordOutput"></div>
-  </main>
+  <div class="container" data-aos="fade-up">
+    <textarea id="textInput" placeholder="Paste or type your text..."></textarea>
+    <button class="btn" onclick="countLines()">📏 Count Lines</button>
+    <div id="output"></div>
+  </div>
 
   <footer style="background-color: #111; color: #eee; padding: 40px 20px; font-family: 'Segoe UI', sans-serif;">
     <div
@@ -390,20 +377,14 @@
     </div>
   </footer>
 
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init();
 
-    function generatePassword() {
-      const length = parseInt(document.getElementById("length").value, 10);
-      const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}[]|:;<>,.?/~";
-      let password = "";
-      for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * charset.length);
-        password += charset[randomIndex];
-      }
-      document.getElementById("passwordOutput").innerText = `Generated Password: ${password}`;
+    function countLines() {
+      const input = document.getElementById("textInput").value;
+      const lines = input.split(/\r?\n/).filter(line => line.trim() !== '').length;
+      document.getElementById("output").innerText = `Total Non-Empty Lines: ${lines}`;
     }
   </script>
   <script>
@@ -422,6 +403,7 @@
       }
     });
   </script>
+
 </body>
 
 </html>
