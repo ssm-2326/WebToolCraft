@@ -1,411 +1,480 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Title & Meta -->
-    <title>Word Counter Tool - WebToolCraft</title>
-    <meta name="description"
-        content="Use our free Word Counter Tool to count words, characters, and spaces instantly. Boost your writing with real-time stats." />
-    <meta name="keywords" content="word counter, character counter, online word count, WebToolCraft" />
-    <meta name="author" content="Sandeep Singh" />
-    <meta name="google-adsense-account" content="ca-pub-6058277772245913">
+  <meta name="description"
+    content="Explore free tools like Word Counter, BMI Calculator, Age Calculator , WordCountTools.in ,line-counter tool,remove-spaces tool, Reading-time-estimator,case-converter tool ,password-generator  more on WebToolCraft Tools page." />
 
-    <!-- Favicon (optional but good for branding) -->
-    <link rel="icon" href="../favicon.png" type="image/png" />
+  <meta name="keywords" content="Word Counter, Character Counter, Word Count Tool, Online Text Counter, SEO tools">
+  <meta name="author" content="Sandeep Singh">
+  <meta name="google-adsense-account" content="ca-pub-6058277772245913">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="google-adsense-account" content="ca-pub-6058277772245913">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
-    <!-- CSS Libraries -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WH77BWSD36"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-WH77BWSD36');
+  </script>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WH77BWSD36"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-WH77BWSD36');
-    </script>
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6058277772245913"
+    crossorigin="anonymous"></script>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6058277772245913"
-        crossorigin="anonymous"></script>
 
-    <!-- Adsterra Ads -->
-    <script type="text/javascript"
-        src="//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js"></script>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #f5f5f5;
-            color: #222;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        header {
-            background: #007BFF;
-            padding: 1rem 2rem;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+  <!-- Adsterra SocialBar -->
+  <script type='text/javascript'
+    src='//pl27197870.profitableratecpm.com/6a/ad/ac/6aadac1a2e9b7e3728b0f334d5b08429.js'></script>
 
 
 
-        header h1 {
-            margin: 0;
-            font-size: 1.6rem;
-            font-weight: 600;
-        }
+  <meta name="p:domain_verify" content="444c0b324aeba2f23e0142d2f6850756" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-        nav a {
-            margin: 0 12px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bolder;
-        }
+  <!-- Pinterest Domain Verify (if using Pinterest marketing) -->
+  <meta name="p:domain_verify" content="444c0b324aeba2f23e0142d2f6850756" />
 
 
-        nav a:hover {
-            color: #ffd700;
-        }
+  <title>WebToolCraft Powered by wordcounttools.in </title>
 
-        nav a.active {
-            border-bottom: 2px solid #ffd700;
-        }
+  <!-- Icons & Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="canonical" href="https://www.wordcounttools.in/" />
 
-        nav a[href="index.html"] {
-            border-bottom: 2px solid #ffd700;
-        }
 
-        .menu-toggle {
-            display: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: #fff;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* ✅ Mobile Responsive & Animation */
-        @media (max-width: 768px) {
-            nav {
-                position: absolute;
-                top: 60px;
-                left: 0;
-                right: 0;
-                background: #007BFF;
-                flex-direction: column;
-                overflow: hidden;
-                max-height: 0;
-                opacity: 0;
-                transition: max-height 0.4s ease, opacity 0.4s ease;
-            }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-            nav.show {
-                max-height: 300px;
-                /* Enough height for menu items */
-                opacity: 1;
-            }
+    html {
+      scroll-behavior: smooth;
+    }
 
-            nav a {
-                padding: 12px;
-                display: block;
-                text-align: center;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            }
 
-            .menu-toggle {
-                display: block;
-            }
-        }
+    header {
+      background: #007BFF;
+      padding: 1rem 2rem;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        main {
-            max-width: 800px;
-            margin: 6rem auto 2rem;
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
 
-        textarea {
-            width: 100%;
-            height: 200px;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            padding: 1rem;
-            font-size: 1rem;
-        }
+    nav a {
+      margin: 0 12px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-        .stats {
-            margin-top: 1.5rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-        }
+    nav a:hover {
+      color: #ffd700;
+    }
 
-        .stat {
-            background: #f0faff;
-            padding: 1rem;
-            border-radius: 10px;
-            text-align: center;
-        }
+    nav a.active {
+      border-bottom: 2px solid #ffd700;
+    }
 
-        .stat h3 {
-            color: #007BFF;
-            font-size: 1.2rem;
-        }
+    nav a[href="index.html"] {
+      border-bottom: 2px solid #ffd700;
+    }
 
-        .stat p {
-            font-weight: bold;
-            font-size: 1.4rem;
-        }
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #fff;
+    }
 
-        footer {
-            background: #222;
-            color: #ccc;
-            text-align: center;
-            padding: 1rem;
-            /* margin-top: 2rem; */
-        }
+    /* ✅ Mobile Responsive & Animation */
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #007BFF;
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+      }
 
-        /* Dropdown container */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
+      nav.show {
+        max-height: 300px;
+        /* Enough height for menu items */
+        opacity: 1;
+      }
 
-        /* Dropdown content (hidden by default) */
-        .dropdown-content {
-            position: absolute;
-            background-color: #007BFF;
-            min-width: 180px;
-            display: none;
-            flex-direction: column;
-            animation: fadeSlide 0.3s ease;
-            z-index: 100;
-        }
+      nav a {
+        padding: 12px;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
 
-        /* Dropdown links */
-        .dropdown-content a {
-            padding: 10px 16px;
-            color: #fff;
-            text-align: left;
-            text-decoration: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
+      .menu-toggle {
+        display: block;
+      }
+    }
 
-        /* Hover Show (Desktop) */
-        .dropdown:hover .dropdown-content {
-            display: flex;
-        }
+    /* 
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      animation: fadeIn 0.8s ease-in-out;
+    } */
 
-        /* Animation */
-        @keyframes fadeSlide {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    main h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #007BFF;
+    }
 
-        /* ✅ Responsive (mobile toggle open) */
-        @media (max-width: 768px) {
-            .dropdown {
-                width: 100%;
-            }
+    main p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #333;
+    }
 
-            .dropdown-content {
-                position: relative;
-                min-width: 100%;
-                display: none;
-                animation: none;
-            }
+    .intro {
+      text-align: center;
+      padding: 2rem 1rem 0;
+    }
 
-            .dropdown.open .dropdown-content {
-                display: flex;
-            }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-            nav a,
-            .dropdown-content a {
-                text-align: center;
-            }
-        }
-    </style>
+    .tool-card {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #f0f0f0;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .tool-card h3 {
+      color: #1a1a1a;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .tool-card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .tool-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .tool-card a:hover {
+      background-color: #ffd700;
+      color: #000;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* CSS: Underline active page link
+    nav a.active {
+      border-bottom: 2px solid #ffd700;
+    }
+
+    nav a[href="Home.html"] {
+      border-bottom: 2px solid #ffd700;
+    } */
+
+
+    /* Dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+      position: absolute;
+      background-color: #007BFF;
+      min-width: 180px;
+      display: none;
+      flex-direction: column;
+      animation: fadeSlide 0.3s ease;
+      z-index: 100;
+    }
+
+    /* Dropdown links */
+    .dropdown-content a {
+      padding: 10px 16px;
+      color: #fff;
+      text-align: left;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Hover Show (Desktop) */
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+
+    /* Animation */
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ✅ Responsive (mobile toggle open) */
+    @media (max-width: 768px) {
+      .dropdown {
+        width: 100%;
+      }
+
+      .dropdown-content {
+        position: relative;
+        min-width: 100%;
+        display: none;
+        animation: none;
+      }
+
+      .dropdown.open .dropdown-content {
+        display: flex;
+      }
+
+      nav a,
+      .dropdown-content a {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <h1><a href="https://www.wordcounttools.in" style="color: #fff; text-decoration: none;">WebToolCraft</a></h1>
-        <nav id="navbar" class="nav">
-            <a href="../index.html" class="active">Home</a>
-            <a href="../tools.html">Tools</a>
-            <a href="../about.html">About</a>
+  <header>
+    <h1><a href="https://www.wordcounttools.in" style="color: #fff; text-decoration: none;">WebToolCraft</a></h1>
+    <nav id="navbar" class="nav">
+      <a href="../index.html" class="active">Home</a>
+      <a href="../tools.html">Tools</a>
+      <a href="../about.html">About</a>
 
-            <!-- Blog with Dropdown -->
-            <div class="dropdown">
-                <a href="../blog.html">Blog</a>
-                <div class="dropdown-content">
-                    <a href="categories/computer-basic.html">Computer Basic</a>
-                    <a href="categories/internet-basic.html">Internet Basic</a>
-                </div>
-            </div>
-
-            <a href="../contact.html">Contact</a>
-        </nav>
-
-        <div class="menu-toggle" id="menu-toggle">
-            <i class="fas fa-bars"></i>
+      <!-- Blog with Dropdown -->
+      <div class="dropdown">
+        <a href="../blog.html">Blog</a>
+        <div class="dropdown-content">
+          <a href="categories/computer-basic.html">Computer Basic</a>
+          <a href="categories/internet-basic.html">Internet Basic</a>
         </div>
-    </header>
+      </div>
 
-    <main data-aos="fade-up">
-        <h2>Type or paste your text below:</h2>
-        <textarea id="textInput" placeholder="Start typing..."></textarea>
+      <a href="../contact.html">Contact</a>
+    </nav>
 
-        <div class="stats">
-            <div class="stat">
-                <h3>Words</h3>
-                <p id="wordCount">0</p>
-            </div>
-            <div class="stat">
-                <h3>Characters</h3>
-                <p id="charCount">0</p>
-            </div>
-            <div class="stat">
-                <h3>Sentences</h3>
-                <p id="sentenceCount">0</p>
-            </div>
-            <div class="stat">
-                <h3>Paragraphs</h3>
-                <p id="paraCount">0</p>
-            </div>
-            <div class="stat">
-                <h3>Reading Time</h3>
-                <p id="readTime">0 sec</p>
-            </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+  <main>
+    <div class="intro">
+      <h2 class="animate__animated animate__fadeInDown">Welcome to WebToolCraft</h2>
+      <p class="animate__animated animate__fadeInUp">WebToolCraft Powered by wordcounttools.in – Your go-to platform for
+        productivity
+        tools.</p>
+
+    </div>
+
+    <section class="container">
+      <div class="tool-card" data-aos="fade-up">
+        <h3>Word & Character Counter</h3>
+        <p>Count words, characters and paragraphs in real-time.</p>
+        <a href="wordcounttools.html">Use Tool</a>
+      </div>
+
+      <div class="tool-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Age Calculator</h3>
+        <p>Calculate your exact age using your date of birth.</p>
+        <a href="age-calculator.html">Use Tool</a>
+      </div>
+
+      <div class="tool-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>BMI Calculator</h3>
+        <p>Calculate your Body Mass Index from height and weight.</p>
+        <a href="BMI-Calculator.html">Use Tool</a>
+      </div>
+
+      <div class="tool-card" data-aos="fade-up" data-aos-delay="300">
+        <h3>Case Converter</h3>
+        <p>Convert text to UPPERCASE, lowercase, Sentence case, etc.</p>
+        <a href="case-converter.html">Use Tool</a>
+      </div>
+
+      <div class="tool-card" data-aos="fade-up" data-aos-delay="400">
+        <h3>Remove Extra Spaces</h3>
+        <p>Clean up your text by removing unnecessary spaces.</p>
+        <a href="remove-spaces.html">Use Tool</a>
+      </div>
+
+      <div class="tool-card" data-aos="fade-up" data-aos-delay="500">
+        <h3>Slug Generator</h3>
+        <p>Generate SEO-friendly URL slugs from your text.</p>
+        <a href="Slug-generator.html">Use Tool</a>
+      </div>
+
+      <div class="tool-card" data-aos="fade-up" data-aos-delay="600">
+        <h3>Reading Time Estimator</h3>
+        <p>Estimate how long it takes to read your content.</p>
+        <a href="Reading-time-estimator.html">Use Tool</a>
+      </div>
+
+      <div class="tool-card" data-aos="fade-up" data-aos-delay="700">
+        <h3>Password Generator</h3>
+        <p>Create strong and secure passwords instantly.</p>
+        <a href="password-generator.html">Use Tool</a>
+      </div>
+
+      <div class="tool-card" data-aos="fade-up" data-aos-delay="800">
+        <h3>Character Counter (No Spaces)</h3>
+        <p>Count characters excluding spaces in your text.</p>
+        <a href="character-counter-nospace.html">Use Tool</a>
+      </div>
+
+      <div class="tool-card" data-aos="fade-up" data-aos-delay="900">
+        <h3>Line Counter</h3>
+        <p>Count how many lines your text contains.</p>
+        <a href="line-counter.html">Use Tool</a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background-color: #111; color: #eee; padding: 40px 20px; font-family: 'Segoe UI', sans-serif;">
+    <div
+      style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; text-align: center;">
+
+      <!-- Branding & Copyright -->
+      <div style="flex: 1 1 250px;">
+        <h2 style="margin: 0;">
+          <a href="index.html" class="brand-link" style="color: #ffd700; text-decoration: none;">
+            WebToolCraft
+          </a>
+        </h2>
+        <p style="font-size: 0.9rem; margin: 10px 0;">Empowering your web tools experience 🚀</p>
+        <p style="font-size: 0.8rem; color: #aaa;">&copy; 2025 WebToolCraft. All rights reserved.</p>
+      </div>
+
+      <!-- Navigation Links -->
+      <div style="flex: 1 1 200px;">
+        <h4 style="margin-bottom: 10px; color: #ffd700;">Quick Links</h4>
+        <a href="privacy-policy.html" style="color: #ccc; text-decoration: none; display: block; margin: 5px 0;">Privacy
+          & Disclaimer</a>
+        <a href="terms.html" style="color: #ccc; text-decoration: none; display: block; margin: 5px 0;">Terms &
+          Conditions</a>
+      </div>
+
+      <!-- Social Media -->
+      <div style="flex: 1 1 200px;">
+        <h4 style="margin-bottom: 10px; color: #ffd700;">Follow Us</h4>
+        <div style="display: flex; justify-content: center; gap: 15px; font-size: 1.5rem;">
+          <a href="https://www.instagram.com/ssm_2326/" target="_blank" style="color: #fff;"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://www.threads.net/@ssm_2326" target="_blank" style="color: #fff;"><i
+              class="fa-brands fa-threads"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100073714513688" target="_blank" style="color: #fff;"><i
+              class="fab fa-facebook"></i></a>
         </div>
-    </main>
+      </div>
 
-    <footer style="background-color: #111; color: #eee; padding: 40px 20px; font-family: 'Segoe UI', sans-serif;">
-        <div
-            style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; text-align: center;">
+    </div>
+  </footer>
 
-            <!-- Branding & Copyright -->
-            <div style="flex: 1 1 250px;">
-                <h2 style="margin: 0;">
-                    <a href="index.html" class="brand-link" style="color: #ffd700; text-decoration: none;">
-                        WebToolCraft
-                    </a>
-                </h2>
-                <p style="font-size: 0.9rem; margin: 10px 0;">Empowering your web tools experience 🚀</p>
-                <p style="font-size: 0.8rem; color: #aaa;">&copy; 2025 WebToolCraft. All rights reserved.</p>
-            </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
-            <!-- Navigation Links -->
-            <div style="flex: 1 1 200px;">
-                <h4 style="margin-bottom: 10px; color: #ffd700;">Quick Links</h4>
-                <a href="privacy-disclaimer.html"
-                    style="color: #ccc; text-decoration: none; display: block; margin: 5px 0;">Privacy
-                    & Disclaimer</a>
-                <a href="terms.html" style="color: #ccc; text-decoration: none; display: block; margin: 5px 0;">Terms &
-                    Conditions</a>
-            </div>
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const nav = document.getElementById('navbar');
 
-            <!-- Social Media -->
-            <div style="flex: 1 1 200px;">
-                <h4 style="margin-bottom: 10px; color: #ffd700;">Follow Us</h4>
-                <div style="display: flex; justify-content: center; gap: 15px; font-size: 1.5rem;">
-                    <a href="https://www.instagram.com/ssm_2326/" target="_blank" style="color: #fff;"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://www.threads.net/@ssm_2326" target="_blank" style="color: #fff;"><i
-                            class="fa-brands fa-threads"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=100073714513688" target="_blank"
-                        style="color: #fff;"><i class="fab fa-facebook"></i></a>
-                </div>
-            </div>
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
 
-        </div>
-    </footer>
+    // Mobile dropdown open/close
+    const dropdown = document.querySelector('.dropdown');
+    dropdown.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        dropdown.classList.toggle('open');
+      }
+    });
+  </script>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>AOS.init();</script>
-    <script>
-        const textInput = document.getElementById("textInput");
-
-        textInput.addEventListener("input", () => {
-            const text = textInput.value;
-            document.getElementById("wordCount").textContent = countWords(text);
-            document.getElementById("charCount").textContent = text.length;
-            document.getElementById("sentenceCount").textContent = countSentences(text);
-            document.getElementById("paraCount").textContent = countParagraphs(text);
-            document.getElementById("readTime").textContent = estimateReadingTime(text);
-        });
-
-        function countWords(str) {
-            return str.trim().split(/\s+/).filter(word => word.length > 0).length;
-        }
-
-        function countSentences(str) {
-            return (str.match(/[^.!?]+[.!?]+/g) || []).length;
-        }
-
-        function countParagraphs(str) {
-            return str.trim().split(/\n+/).filter(p => p.trim().length > 0).length;
-        }
-
-        function estimateReadingTime(str) {
-            const wordsPerMinute = 200;
-            const words = countWords(str);
-            const minutes = words / wordsPerMinute;
-            return minutes < 1 ? `${Math.ceil(minutes * 60)} sec` : `${Math.round(minutes)} min`;
-        }
-    </script>
-
-    <script>
-        const toggleBtn = document.getElementById('menu-toggle');
-        const nav = document.getElementById('navbar');
-
-        toggleBtn.addEventListener('click', () => {
-            nav.classList.toggle('show');
-        });
-
-        // Mobile dropdown open/close
-        const dropdown = document.querySelector('.dropdown');
-        dropdown.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
-                dropdown.classList.toggle('open');
-            }
-        });
-    </script>
 </body>
 
 </html>
