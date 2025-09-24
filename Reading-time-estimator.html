@@ -393,6 +393,19 @@
     <button class="btn" onclick="estimateReadingTime()">⏱️ Estimate Reading Time</button>
     <div id="output"></div>
   </main>
+  <!-- Back Button -->
+    <div style="text-align: center; margin: 30px 0;">
+        <button onclick="goBack()"
+            style="padding: 12px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+            ← Go Back
+        </button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 
   <footer style="background-color: #111; color: #eee; padding: 40px 20px; font-family: 'Segoe UI', sans-serif;">
     <div
@@ -469,3 +482,4 @@
 </body>
 
 </html>
+
